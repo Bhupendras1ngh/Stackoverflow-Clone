@@ -1,21 +1,24 @@
 <div class="container">
     <div class="form-container">
         <div class="title">Login</div>
-        <form>
+        <form  [formGroup]= "loginForm">
             <mat-form-field appearance ="outline">
                 <mat-label>Enter your Email</mat-label>
-                <input matInput />
+                <input  matInput formControlName="email" />
+                <mat-error>{{loginForm.controls.email.hasError('required')?'Email is required':'Invalid Email'}}</mat-error>
             </mat-form-field>
             <mat-form-field appearance ="outline">
                 <mat-label>Password</mat-label>
-                <input type= "password" matInput />
+                <input type= "password" matInput  formControlName="password"/>
+                <mat-error>{{loginForm.controls.password.hasError('required')?'password is required':'password length should be >5'}}</mat-error>
             </mat-form-field>
 
         </form>
         <div class="button-container">
-            <button mat-raised-button class ="login-button">Login</button>
+            <button mat-raised-button class ="login-button"  [disabled]="loginForm.invalid">Login</button>
             <p>OR</p>
-            <button mat-button> Create Account</button>
+            <button routerLink ='/create-account' mat-button> Create Account</button>
         </div>
+       
     </div>
 </div>
