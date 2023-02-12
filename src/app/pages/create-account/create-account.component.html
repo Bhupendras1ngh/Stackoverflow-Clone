@@ -20,7 +20,7 @@
 
         </form>
         <div class="button-container">
-            <button mat-raised-button class="login-button" [disabled]="createForm.invalid">Create Account</button>
+            <button (click) ="createAccount()" mat-raised-button class="login-button" [disabled]="createForm.invalid">Create Account</button>
             <p>OR</p>
             <button routerLink ='/login' mat-button> Login</button>
         </div>
