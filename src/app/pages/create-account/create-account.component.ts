@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./create-account.component.css']
 })
 export class CreateAccountComponent {
-constructor(private  fb:FormBuilder ,public userService :UserService){}
+constructor(private  fb:FormBuilder ,public userService :UserService ,private router :Router){}
   createForm = this.fb.group({
     email :['' ,[Validators.required ,Validators.email]],
     username : ['' ,[Validators.required ,Validators.maxLength(6)]],
@@ -18,6 +19,10 @@ constructor(private  fb:FormBuilder ,public userService :UserService){}
   createAccount(){
     this.userService.createAccount(this.createForm.value).subscribe((res)=>{
       console.log(res);
+      setTimeout(()=>{
+        this.router.navigate(['/home']);
+      } ,1000);
+
     })
   }
 }
