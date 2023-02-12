@@ -9,12 +9,20 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class TopbarComponent {
 constructor(public userService :UserService ,private router :Router){}
-
+ngOnInit(){
+  if(this.userService.user ==undefined){
+    let local =localStorage.getItem('user');
+    if(local != null){
+      this.userService.user = JSON.parse(local);
+    }
+  }
+}
 logout(){
   this.userService.user =undefined;
   setTimeout(()=>{
     this.router.navigate(['/login']);
   }, 500)
+  localStorage.clear();
 
 }
 }

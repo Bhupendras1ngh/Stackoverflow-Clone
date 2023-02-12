@@ -27,6 +27,7 @@ export class LoginComponent {
         if(res[0].password == this.loginForm.value.password){
           console.log(res);
           this.userService.user =res[0];
+          localStorage.setItem('user', JSON.stringify(res[0]));
           setTimeout(()=>{
             this.router.navigate(['/home']);
           } ,1000);
