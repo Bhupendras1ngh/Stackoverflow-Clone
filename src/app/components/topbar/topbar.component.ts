@@ -15,6 +15,9 @@ ngOnInit(){
     if(local != null){
       this.userService.user = JSON.parse(local);
     }
+    else{
+      this.router.navigate(['/login']);
+    }
   }
 }
 logout(){

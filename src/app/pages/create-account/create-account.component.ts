@@ -19,6 +19,8 @@ constructor(private  fb:FormBuilder ,public userService :UserService ,private ro
   createAccount(){
     this.userService.createAccount(this.createForm.value).subscribe((res)=>{
       console.log(res);
+      this.userService.user =res;
+      localStorage.setItem('user' ,JSON.stringify(res));
       setTimeout(()=>{
         this.router.navigate(['/home']);
       } ,1000);
