@@ -2,4 +2,7 @@
     <div class="branding">
         StackoverFlow
     </div>
+    <div *ngIf = "userService.user != undefined" class="logout-container">
+        <button (click) ="logout()" mat-button class="logout"> Log0ut</button>
+    </div>
 </div>

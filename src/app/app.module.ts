@@ -12,6 +12,9 @@ import { CreateAccountComponent } from './pages/create-account/create-account.co
 import {FormsModule ,ReactiveFormsModule} from '@angular/forms'
 import {HttpClientModule} from '@angular/common/http';
 import { HomeComponent } from './pages/home/home.component'
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
+
 
 @NgModule({
   declarations: [
@@ -29,7 +32,8 @@ import { HomeComponent } from './pages/home/home.component'
     MatFormFieldModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSnackBarModule
 
 
 
