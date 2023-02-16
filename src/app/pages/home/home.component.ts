@@ -11,7 +11,14 @@ export class HomeComponent {
 constructor(public questionservice :QuestionService ,public userservice: UserService){
 
 }
+ngOnInit(){
+  this.questionservice.fetchQuestions().subscribe((res :any)=>{
+   this.questionList =res;
+   console.log(res);
+  })
+}
   question:string= "";
+  questionList :Array<any> =[];
   post(){
     this.questionservice.postQuestion({
       username :this.userservice.user.username,
@@ -19,7 +26,7 @@ constructor(public questionservice :QuestionService ,public userservice: UserSer
       solutions: []
     }).subscribe((res)=>{
       console.log(res);
-      console.log("post question");
+      this.questionList.push(res);
       this.question ="";
     })
   }
