@@ -23,7 +23,20 @@
     {
       "username": "bbbbb",
       "question": "abcd",
-      "solutions": [],
+      "solutions": [
+        {
+          "username": "bbbbb",
+          "solution": "answer",
+          "upvotes": [],
+          "downvotes": []
+        },
+        {
+          "username": "bbbbb",
+          "solution": "the answer should be more visible",
+          "upvotes": [],
+          "downvotes": []
+        }
+      ],
       "id": 1
     },
     {
