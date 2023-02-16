@@ -5,7 +5,7 @@
                   
         </mat-form-field>
         <div class="new-post-action-container">
-            <button (click) ="post()" mat-raised-button [disabled] = "question.trim() == ''" class ="post-button">POST</button>
+            <button (click) ="post()" mat-raised-button [disabled] = "question.trim() == ''" class ="post-button" matTooltip="Post">POST</button>
         </div>
 
         <mat-card class="question-card"  *ngFor ="let question of questionList" [routerLink]="'/view-solution/' + question.id">

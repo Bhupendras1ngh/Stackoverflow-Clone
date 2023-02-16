@@ -7,9 +7,9 @@
         <mat-card-content>
             <div class="solution-container">
                 <div class="arrows-container">
-                    <button (click)= "vote(i ,1)" [class.colored-icon] ="solution.upvotes.indexOf(userservice.user.id) >=0" mat-icon-button><mat-icon>expand_less</mat-icon></button>
+                    <button (click)= "vote(i ,1)" [class.colored-icon] ="solution.upvotes.indexOf(userservice.user.id) >=0" mat-icon-button matTooltip="upvote"><mat-icon>expand_less</mat-icon></button>
                     {{solution.upvotes.length - solution.downvotes.length}}
-                    <button (click)= "vote(i ,-1)"  [class.colored-icon] ="solution.downvotes.indexOf(userservice.user.id) >=0" mat-icon-button><mat-icon>expand_more</mat-icon></button>
+                    <button (click)= "vote(i ,-1)"  [class.colored-icon] ="solution.downvotes.indexOf(userservice.user.id) >=0" mat-icon-button matTooltip="downvote"><mat-icon>expand_more</mat-icon></button>
                    
                 </div>
                 <div class="data-container">
@@ -28,7 +28,7 @@
       </mat-form-field>
      
       <div class="new-post-actions-container">
-        <button  [disabled] ="solutionText.trim() == ''"  mat-raised-button  class="post-button" (click) ="postSolution()">Post</button>
+        <button  [disabled] ="solutionText.trim() == ''"  mat-raised-button  class="post-button" (click) ="postSolution()" matTooltip="Post">Post</button>
       </div>
     </div>
   </div>
