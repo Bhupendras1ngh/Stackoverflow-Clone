@@ -17,6 +17,12 @@
       "username": "payal",
       "password": "123456789",
       "id": 3
+    },
+    {
+      "email": "bs@gmail.com",
+      "username": "777",
+      "password": "123456789",
+      "id": 4
     }
   ],
   "question": [
@@ -50,6 +56,19 @@
       "question": "this is the third one",
       "solutions": [],
       "id": 3
+    },
+    {
+      "username": "777",
+      "question": "how to fix the error for subscription is not able to bind bull pointer",
+      "solutions": [
+        {
+          "username": "777",
+          "solution": "use return statement in the API call",
+          "upvotes": [],
+          "downvotes": []
+        }
+      ],
+      "id": 4
     }
   ]
 }

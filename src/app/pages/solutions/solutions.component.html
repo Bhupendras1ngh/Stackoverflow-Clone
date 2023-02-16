@@ -26,7 +26,7 @@
       <mat-form-field appearance="fill">
         <textarea [(ngModel)] ="solutionText" matInput cdkTextareaAutosize cdkAutosizeMinRows="5" placeholder="Type your solution..."></textarea>
       </mat-form-field>
-      {{solutionText}}
+     
       <div class="new-post-actions-container">
         <button  [disabled] ="solutionText.trim() == ''"  mat-raised-button  class="post-button" (click) ="postSolution()">Post</button>
       </div>
