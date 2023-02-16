@@ -14,7 +14,8 @@ import {HttpClientModule} from '@angular/common/http';
 import { HomeComponent } from './pages/home/home.component'
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatCardModule} from '@angular/material/card';
-
+import { SolutionsComponent } from './pages/solutions/solutions.component';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {MatCardModule} from '@angular/material/card';
     TopbarComponent,
     LoginComponent,
     CreateAccountComponent,
-    HomeComponent
+    HomeComponent,
+    SolutionsComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +36,8 @@ import {MatCardModule} from '@angular/material/card';
     ReactiveFormsModule,
     HttpClientModule,
     MatSnackBarModule,
-    MatCardModule
+    MatCardModule,
+    MatIconModule
 
 
 

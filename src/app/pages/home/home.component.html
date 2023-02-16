@@ -8,7 +8,7 @@
             <button (click) ="post()" mat-raised-button [disabled] = "question.trim() == ''" class ="post-button">POST</button>
         </div>
 
-        <mat-card class="question-card"  *ngFor ="let question of questionList">
+        <mat-card class="question-card"  *ngFor ="let question of questionList" [routerLink]="'/view-solution/' + question.id">
             <mat-card-header>
                 <mat-card-title>{{question.username}}</mat-card-title>
             </mat-card-header>
