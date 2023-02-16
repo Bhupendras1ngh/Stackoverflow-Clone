@@ -20,9 +20,9 @@
 
         </form>
         <div class="button-container">
-            <button (click) ="createAccount()" mat-raised-button class="login-button" [disabled]="createForm.invalid">Create Account</button>
+            <button (click) ="createAccount()" mat-raised-button class="login-button" [disabled]="createForm.invalid" matTooltip="Create Account">Create Account</button>
             <p>OR</p>
-            <button routerLink ='/login' mat-button> Login</button>
+            <button routerLink ='/login' mat-raised-button  matTooltip="Login"> Login</button>
         </div>
         
     </div>
